@@ -12,7 +12,7 @@ basketStarterEl.addEventListener('click', event => {
   }
 })
 basketEl.addEventListener('click', event => {
-    event.stopPropagation() // 이벤트 버블링 정지! - 드롭다운 메뉴 영역을 클릭했을 때 메뉴가 사라지지 않아야 함.
+  event.stopPropagation() // 이벤트 버블링 정지! - 드롭다운 메뉴 영역을 클릭했을 때 메뉴가 사라지지 않아야 함.
 })
 // 화면 전체를 클릭했을 때 메뉴가 사라짐.
 window.addEventListener('click', () => {
@@ -25,4 +25,24 @@ function showBasket() {
 }
 function hideBasket() {
   basketEl.classList.remove('show')
+}
+
+//검색
+const headerEl = document.querySelector('header')
+const searchWrapEl = headerEl.querySelector('.search-wrap')
+const searchStarterEl = headerEl.querySelector('.search-starter')
+const searchCloserEl = searchWrapEl.querySelector('.search-closer')
+const searchShadowEl = searchWrapEl.querySelector('.shadow')
+
+searchStarterEl.addEventListener('click', showSearch)
+searchCloserEl.addEventListener('click', hideSearch)
+searchShadowEl.addEventListener('click', hideSearch)
+
+function showSearch() {
+  headerEl.classList.add('searching')
+  document.documentElement.classList.add('fixed')
+}
+function hideSearch() {
+  headerEl.classList.remove('searching')
+  document.documentElement.classList.remove('fixed')
 }

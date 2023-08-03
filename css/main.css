@@ -1,4 +1,10 @@
+html.fixed {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
 body {
+  height: 10000px;
   font-size: 16px;
   line-height: 1;
   font-family: "Roboto", "Noto Sans KR", sans-serif;
@@ -131,6 +137,7 @@ header .basket {
     top: 0;
     left: 0;
     width: 100%;
+    display: none;
   }
   header .search {
     max-width: 680px;
@@ -213,4 +220,7 @@ header .basket {
   }
   header.searching ul.menu > li {
     display: none;
+  }
+  header.searching .search-wrap {
+    display: block;
   }
