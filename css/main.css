@@ -149,7 +149,9 @@ a.link::after {
 .info {
   max-width: 330px;
   margin-bottom: 24px;
+  opacity: 0;
   transition: 1s;
+  transform: trnaslate(0, 100px);
 }
 .info.show {
   transform: translate(0, 0);
