@@ -1,5 +1,5 @@
 import ipads from '../data/ipads.js'
-
+import navigations from '../data/navigations.js'
 // 장바구니!
 // 장바구니 관련 요소 찾기.
 const basketStarterEl = document.querySelector('header .basket-starter')
