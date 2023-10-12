@@ -37,6 +37,13 @@ img {
 p {
   line-height: 1.6;
 }
+
+sup {
+  margin-right: 6px;
+  font-size: .7em;
+  vertical-align: top;
+}
+
 /* Inner */
 .inner {
   max-width: 980px;
@@ -1030,6 +1037,19 @@ main {
 
 @media (max-width: 1000px) {
   .environment p br {
+    display: none;
+  }
+}
+
+/* Trade */
+.trade {
+  padding: 20px 20px 0;
+  background-color: var(--color-section);
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .trade p br {
     display: none;
   }
 }
